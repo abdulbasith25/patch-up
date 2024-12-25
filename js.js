@@ -4,6 +4,7 @@ const totalSlides = slides.length;
 
 function showSlide() {
   
+    
     slides.forEach((slide, index) => {
         slide.style.opacity = 0;
     });
