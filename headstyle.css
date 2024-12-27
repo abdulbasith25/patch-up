@@ -1,18 +1,80 @@
-.header{
-    background-color: chocolate;
-padding: 10px;}
-.top {margin: 0;padding: 0px;padding-top: 0px; background-color: chocolate;height: 30vh;
-    display: flex; justify-content: center;align-items: center;
-    text-align: center;font-size: 60px; rgb(0, 0, 0);font-family: Arial, Helvetica, sans-serif;
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.top {
+    margin: 0;
+    padding: 0;
+    padding-top: 0;
+    background-color: rgb(67, 186, 246);
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 60px;
+    color: rgb(0, 0, 0);
+    font-family: "Anton", serif;
+    font-weight: 400;
+    font-style: normal;
+    position: relative;
+    }
+    .sliding-container {
+        display: flex; /* Arrange the texts side by side */
+        width: 200%; /* Make the container wide enough to fit both texts */
+        animation: slide 15s linear infinite; /* Animate the container */
+      }
+.toptext{
+   
+    display: inline-block;
+    position: relative;
+  
+    white-space: nowrap;
+}
+@keyframes slide{
+    0%{
+        transform:translateX(100%);}
+    100%{
+        transform:translateX(-100%);}
+}
 
+.li {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 120px;
+    width: auto; 
+    background-color: #89f7fe;
 }
-.sdiv{
-   padding-top: 10vh; width: 100%;height: 400px;position: relative;overflow: hidden;
-    display: flex; justify-content: center; align-items: center;
+.li a{
+    text-decoration: none;
 }
-.slide{width: ;height: %;position: absolute;opacity: 0;
-transition:opacity 1s ease-in-out;}
-.slide :nth-child(1){opacity: 1;}
+.sdiv {
+    padding-top: 10vh;
+    width: 100%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sdiv .slide {
+    width: 100%; /* Set width for images */
+    height: auto; /* Keep aspect ratio intact */
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.sdiv .slide:nth-child(1) {
+    opacity: 1;
+}
+
 @keyframes fade {
     0% {
         opacity: 0;
@@ -26,4 +88,38 @@ transition:opacity 1s ease-in-out;}
     100% {
         opacity: 0;
     }
+}
+
+.desc {
+    display: flex;
+    text-align: center;
+    padding: 5px;
+    font-size: 20px;
+    line-height: 2;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #89f7fe, #298b92, #0f3d41);
+}
+.nav{
+    background-color: rgb(5, 8, 63);
+    padding: 15px;
+    color: rgb(62, 154, 235);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+}
+.nav a{
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(230, 213, 213);
+}
+.nav a:hover{
+    background-color: rgb(34, 136, 225);
+    padding: 0px;
+    transform: scale(1.2);
+}
+.nav a{margin-right: 20px;
+
 }
