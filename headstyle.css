@@ -1,13 +1,13 @@
 html,body{
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     height: 100%;
 }
 .top {
     margin: 0;
     padding: 0;
     padding-top: 0;
-    background-color: rgb(67, 186, 246);
+    background-color: rgb(68, 137, 255);
     height: 20vh;
     display: flex;
     justify-content: center;
@@ -45,60 +45,71 @@ html,body{
     justify-content: center;
     text-align: center;
     align-items: center;
-    height: 120px;
+    height: 75px;
     width: auto; 
-    background-color: #89f7fe;
+    background-color: rgb(123, 192, 244);
+    overflow: hidden;
 }
 .li a{
     text-decoration: none;
-}
-.sdiv {
-    padding-top: 10vh;
-    width: 100%;
-    height: 400px;
-    position: relative;
-    overflow: hidden;
     display: flex;
-    justify-content: center;
+    text-align: center;
     align-items: center;
+    justify-content: center;
+    color: rgb(36, 35, 35);
+   
+   
+
+}
+.li a:hover{
+    background-color: rgb(255, 255, 255);
+    padding-right: 25px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+   
+   
+}
+.li img{
+    border-radius: 20px;
+    transition: transform 0.5s ease;
+    margin-right: 20px;
+    margin-left: 10px;
+    height: 48px;
+    width: 48px;
+
+}
+.li img:hover{
+    transform: rotate(45deg);
+}
+.images img{
+width: 300px; 
+height: 200px;
+border-radius: 5px;
+ 
+}
+.images{
+    display: grid;
+place-items: center;
+background: linear-gradient(100deg, #f4cc78,#c3c35b,#605c29);
+grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+gap: 4px;
 }
 
-.sdiv .slide {
-    width: 100%; /* Set width for images */
-    height: auto; /* Keep aspect ratio intact */
-    position: absolute;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
 
-.sdiv .slide:nth-child(1) {
-    opacity: 1;
-}
-
-@keyframes fade {
-    0% {
-        opacity: 0;
-    }
-    25% {
-        opacity: 1;
-    }
-    75% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
 
 .desc {
     display: flex;
     text-align: center;
-    padding: 5px;
+    color: aliceblue;
+    padding: 0px;
+    margin: 0px;
     font-size: 20px;
     line-height: 2;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #89f7fe, #298b92, #0f3d41);
+    background: linear-gradient(135deg, #376467, #298b92, #0f3d41);
 }
 .nav{
     background-color: rgb(5, 8, 63);
@@ -107,6 +118,7 @@ html,body{
     justify-content: center;
     align-items: center;
     display: flex;
+    flex-wrap: wrap;
     
 }
 .nav a{
@@ -114,12 +126,21 @@ html,body{
     text-decoration: none;
     font-size: 20px;
     color: rgb(230, 213, 213);
+    padding: 10px 15px;
+    margin-right: 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
+
 .nav a:hover{
     background-color: rgb(34, 136, 225);
-    padding: 0px;
-    transform: scale(1.2);
+    padding-top 5px;
+    transform: scale(1);
 }
 .nav a{margin-right: 20px;
 
 }
+@media (max-width: 767px) {
+    .nav {
+        flex-direction: column; 
+        text-align: center; /
+    }
